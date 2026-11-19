@@ -4,7 +4,7 @@ const PROFILE_API = 'https://api.github.com/users/larissealves'
 const MAINCONTAINER = document.querySelector('.main-container');
 const LANGUAGES = document.querySelector('.languages');
 
-const LINKEDIN = document.querySelector('.linkedIn');
+const LINKEDIN = document.querySelector('.linkedin');
 const GITHUB = document.querySelector('.github');
 const INSTAGRAM = document.querySelector('.instagram');
 
@@ -33,10 +33,6 @@ async function fetchProfileSocialAccount() {
                 LINKEDIN.replaceChildren(links);
             }
 
-            if (social.provider.toLowerCase() === 'github') {
-                LINKEDIN.replaceChildren(links);
-            }
-
             if (social.provider.toLowerCase() === 'instagram') {
                 INSTAGRAM.replaceChildren(links);
             }
@@ -57,7 +53,7 @@ async function fetchProfile() {
 
         const profile = await response.json();
 
-        console.log(profile)
+        console.log("PROFILE DETAILS =>", profile)
 
         document.querySelector(".profile-name").textContent = profile.name || profile.login;
         document.querySelector(".bio").textContent = profile.bio || "";
@@ -86,8 +82,11 @@ async function fetchReadme() {
         }
 
         const dataMarkdown = await response.text();
-
         const html = await marked.parse(dataMarkdown);
+        
+
+        console.log("README => ", html)
+
 
         const safeHTML = DOMPurify.sanitize(html);
 

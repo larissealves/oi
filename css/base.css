@@ -91,7 +91,7 @@ header section a {
     color: var(--text);
     text-decoration: none;
     font-size: .85rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
 
     transition: .2s ease;
 }
@@ -101,6 +101,20 @@ header section a:hover {
     background: var(--pink);
     border-color: var(--pink);
     transform: translateY(-3px);
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 24px 0;
+}
+
+.about-me p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 /* LANGUAGES */

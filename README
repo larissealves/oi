@@ -1,0 +1,50 @@
+# GitHub README Portfolio
+
+A simple personal project built to display GitHub profile README information in a more visual, organized, and responsive way across different devices.
+
+The idea is to make existing profile information easier to explore and read, while keeping the content from the original README.
+
+## GitHub API
+
+The project uses the following public GitHub endpoints:
+
+- **Users API:** `https://api.github.com/users/larissealves`
+- **Social Accounts API:** `https://api.github.com/users/larissealves/social_accounts`
+- **README API:** `https://api.github.com/repos/larissealves/larissealves/readme`
+
+## Technologies
+
+HTML, CSS, JavaScript, GitHub REST API, Marked.js and DOMPurify.
+
+## Visual Style
+
+**Typography**
+- DM Sans — body text
+- Space Grotesk — headings and highlights
+
+**Color Palette**
+
+| Color | Hex |
+|---|---|
+| Background | `#251E3A` |
+| Surface | `#342B4A` |
+| Surface Hover | `#403454` |
+| Text | `#F7F0E8` |
+| Muted | `#C5B8D9` |
+| Pink | `#F2A3D0` |
+| Purple | `#B9A4F0` |
+| Blue | `#91D7E9` |
+| Green | `#B9E2C5` |
+
+## Live Demo
+
+[larissealves.github.io/oi](https://larissealves.github.io/oi/)
+
+## Credits
+
+- **Development:** Larisse Alves
+- **Design direction & documentation:** ChatGPT (OpenAI), in collaboration with Larisse Alves.
+
+---
+
+Made with code and curiosity. ♡

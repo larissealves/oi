@@ -1,0 +1,38 @@
+/* MARQUEE */
+
+.marquee {
+  overflow: hidden;
+  padding: 15px 0;
+  background: var(--hot-pink);
+  color: white;
+  transform: rotate(-1deg) scale(1.02);
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track span {
+  padding: 0 22px;
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee-track b {
+  padding-left: 22px;
+  color: #ffd9ed;
+  font-size: 1rem;
+}
+
+
+
+
+
+

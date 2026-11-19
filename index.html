@@ -1,46 +1,221 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <title>Larisse | Portfolio ✦</title>
+    <meta name="theme-color" content="#f7c5dc">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
 </head>
 
 <body>
+    <header class="topbar page-shell">
+        <nav class="nav">
+            <a class="brand" href="#home">larisse<span>.</span>alves</a>
 
-    <header>
-        <h1 class="profile-name"></h1>
+            <ul class="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#languages">Languages</a></li>
+            </ul>
 
-        <p class="bio"></p>
-
-        <p class="company"></p>
-
-        <section class="about-me">
-            <p>💻 Working on full-stack applications and enterprise software</p>
-            <p>🎓 B.Sc. in Information Systems + 3 years of technical education in Computer Networks</p>
-            <p>🌎 Brazil ↔ Thailand</p>
-        </section>
-
-        <section class="socials">
-            <p class="email"></p>
-            <p class="linkedin"> </p>
-            <p class="github"><a href="https://github.com/larissealves" target="_blank">github</a></p>
-            <p class="instagram"> </p>
-        </section>
-
-
+            <a class="nav-contact" href="https://github.com/larissealves/oi" target="_blank">Documentation ↗</a>
+        </nav>
     </header>
 
-    <main class="main-container">loading...</main>
-    <div class="languages"></div>
+    <main>
+        <section class="hero page-shell" id="home">
+            <div class="hero-copy">
+                <div class="hero-kicker">
+                    <span class="status-dot"></span>
+                    <span>Software Engineering </span>
+                </div>
+
+                <p class="eyebrow">Hello, </p>
+
+                <h1>
+                    I'm
+                    <span class="name-accent">Larisse Alves</span>
+                </h1>
+
+                <p class="hero-description bio"></p>
+                <p class="company"></p>
+
+                <div class="hero-socials socials">
+                    <p class="email"></p>
+                    <p class="linkedin"></p>
+                    <p class="github">
+                        <a href="https://github.com/larissealves" target="_blank" rel="noopener noreferrer">GitHub </a>
+                    </p>
+                    <p class="instagram"></p>
+                </div>
+
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="visual-orbit"></div>
+
+                <div class="sticker sticker-pink">♡</div>
+                <div class="sticker sticker-lilac">♡</div>
+                <span class="floating-star a">✧</span>
+                <span class="floating-star b">✦</span>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Software Engineering <b>✳</b></span>
+                <span>Full-stack Development <b>✳</b></span>
+                <span>Computer Networking <b>✳</b></span>
+                <span>Problem Solving <b>✳</b></span>
+                <span>Continuous Learning <b>✳</b></span>
+                <span>Software Engineering <b>✳</b></span>
+                <span>Full-stack Development <b>✳</b></span>
+                <span>Computer Networking <b>✳</b></span>
+                <span>Problem Solving <b>✳</b></span>
+                <span>Continuous Learning <b>✳</b></span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section class="section page-shell" id="about">
+            <span class="side-decoration left">✳</span>
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow"> A little introduction</span>
+                    <h2>About <span>me.</span></h2>
+                </div>
+                <p class="section-note">
+                    A bit about my background, what I enjoy building,
+                    and the things that keep me curious.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <article class="about-intro">
+                    <!--<span class="eyebrow">Hello, world!</span>
+
+          <h3>
+            Curious mind.<br>
+            <span>Builder at heart.</span>
+          </h3>-->
+
+                    <p>
+                        I'm Larisse Alves, a technology enthusiast working with
+                        full-stack applications and enterprise software.
+                        I enjoy exploring different areas of technology,
+                        understanding how things connect, and creating solutions
+                        that are useful, reliable, and easy to maintain.
+                        <br><br>
+                        My background combines software development and computer
+                        networking, giving me a broad perspective on how digital
+                        systems are built and operate.
+                    </p>
+                </article>
+
+                <div class="about-details">
+
+                    <article class="detail-card">
+                        <div class="detail-icon">⌘</div>
+                        <h4>Education</h4>
+                        <p>
+                            B.Sc. in Information Systems and + 3 years of technical education in Computer Networks.
+                        </p>
+                    </article>
+
+                    <article class="detail-card">
+                        <div class="detail-icon">⌁</div>
+                        <h4>What I do</h4>
+                        <p>
+                            Full-stack development, enterprise software,
+                            APIs, and system integration.
+                        </p>
+                    </article>
+
+                    <article class="detail-card">
+                        <div class="detail-icon">✧</div>
+                        <h4>My approach</h4>
+                        <p>
+                            Curious, detail-oriented, and always interested
+                            in learning something new.
+                        </p>
+                    </article>
+
+                    <article class="detail-card">
+                        <div class="detail-icon">◎</div>
+                        <h4>Currently living</h4>
+                        <p>
+                            between Brazil and Thailand
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+
+            <span class="side-decoration right">✦</span>
+        </section>
+
+        <section class="section page-shell" id="skills">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow"> What I work with</span>
+                    <h2>Technical <span>skills.</span></h2>
+                </div>
+                <!--
+                    <p class="section-note">
+                    Skills and technologies loaded directly from my GitHub README.
+                    </p>
+                -->
+            </div>
+
+            <div class="main-container">
+                <!-- The skills table is injected here by git_api.js -->
+            </div>
+        </section>
+
+        <section class="section languages-section" id="languages">
+            <div class="page-shell">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow"> Communication</span>
+                        <h2>Languages <span>I speak.</span></h2>
+                    </div>
+                </div>
+
+                <div class="languages">
+                    <!-- Language information is injected here by git_api.js -->
+                </div>
+
+                <div>
+                    <p class="section-note">Information loaded from my GitHub README.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="page-shell footer-inner">
+            <p>© <span id="current-year"></span> <strong>Larisse Alves</strong> · Made with... I don't know ¯\_(ツ)_/¯</p>
+            <a class="back-top mono" href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
-
     <script type="module" src="./js/git_api.js"></script>
 </body>
 

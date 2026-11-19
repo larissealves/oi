@@ -8,6 +8,7 @@ const LINKEDIN = document.querySelector('.linkedin');
 const GITHUB = document.querySelector('.github');
 const INSTAGRAM = document.querySelector('.instagram');
 
+const CURRENT_YEAR = document.getElementById("current-year").textContent = new Date().getFullYear();
 
 async function fetchProfileSocialAccount() {
     const apiUrl = `${PROFILE_API}/social_accounts`;
@@ -89,7 +90,6 @@ async function fetchReadme() {
 
 
         const safeHTML = DOMPurify.sanitize(html);
-
 
         // Cria um elemento temporário para filtrar o conteúdo
         const temp = document.createElement('div');

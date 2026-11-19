@@ -1,123 +1,113 @@
-
-/* TABLE - DESKTOP */
-
-.main-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
 .main-container table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 8px;
-    table-layout: fixed;
+  display: block;
+  width: 100%;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
-.main-container th {
-    padding: 12px;
-    color: var(--purple);
-    text-align: left;
-    font-size: .75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.main-container thead {
+  display: none;
+}
+
+.main-container tbody {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.main-container tbody tr {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: var(--white);
+  box-shadow: 3px 4px 0 rgba(128, 100, 201, .13);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.main-container tbody tr:nth-child(3n + 2) {
+  background: var(--light-lavender);
+}
+
+.main-container tbody tr:nth-child(3n) {
+  background: var(--light-pink);
+}
+
+.main-container tbody tr:hover {
+  transform: translateY(-5px) rotate(-.5deg);
+  box-shadow: 6px 8px 0 rgba(240, 90, 157, .2);
 }
 
 .main-container td {
-    padding: 16px 12px;
-    overflow-wrap: anywhere;
-    line-height: 1.6;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
+
+/* Category name */
 
 .main-container td:first-child {
-    width: 19%;
+  margin-bottom: 15px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -.04em;
 }
 
-.main-container td:last-child {
-    width: 17%;
+.main-container td:first-child::before {
+  content: "✳ CATEGORY";
+  display: block;
+  margin-bottom: 9px;
+  color: var(--hot-pink);
+  font-family: var(--mono);
+  font-size: .58rem;
+  font-weight: 400;
+  letter-spacing: .08em;
 }
 
-/* MOBILE - TABLE TO CARDS */
+/* Other card information */
 
-@media (max-width: 700px) {
+.main-container td:not(:first-child) {
+  padding-top: 12px;
+  margin-top: 11px;
+  border-top: 1px solid rgba(65, 42, 76, .12);
+  color: var(--muted);
+  font-size: .78rem;
+}
 
-    .main-container {
-        overflow: visible;
-    }
+.main-container td:not(:first-child)::before {
+  content: attr(data-label);
+  display: block;
+  margin-bottom: 5px;
+  color: var(--purple);
+  font-family: var(--mono);
+  font-size: .59rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
 
-    .main-container table,
-    .main-container tbody {
-        display: block;
-        width: 100%;
-    }
+/* Responsive skills */
 
-    .main-container thead {
-        display: none;
-    }
+@media (max-width: 900px) {
+  .main-container tbody {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-    .main-container tbody tr {
-        display: block;
-        width: 100%;
-        margin-bottom: 16px;
-        padding: 16px;
 
-        background: var(--surface);
-        border: 1px solid rgba(185, 164, 240, .18);
-        border-radius: 14px;
-    }
+@media (max-width: 580px) {
+  .main-container tbody {
+    grid-template-columns: 1fr;
+  }
 
-    .main-container tbody td {
-        display: block;
-        width: 100%;
-        padding: 6px 0;
-
-        border: none;
-        border-radius: 0 !important;
-
-        font-size: .85rem;
-        line-height: 1.6;
-        overflow-wrap: anywhere;
-    }
-
-    /* Category name */
-    .main-container tbody td:first-child {
-        width: 100%;
-        padding-bottom: 12px;
-        margin-bottom: 8px;
-
-        color: var(--pink);
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: .9rem;
-        font-weight: 700;
-
-        border-bottom: 1px solid rgba(185, 164, 240, .2);
-    }
-
-    /* Labels */
-    .main-container tbody td:not(:first-child)::before {
-        content: attr(data-label);
-
-        display: block;
-        margin-bottom: 4px;
-
-        color: var(--purple);
-        font-size: .68rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    /* Knowledge level */
-    .main-container tbody td:last-child {
-        margin-top: 8px;
-        padding-top: 10px;
-        width: 100%;
-
-        color: var(--green);
-        border-top: 1px solid rgba(185, 164, 240, .15);
-    }
-
-    .main-container tbody td:last-child::before {
-        color: var(--green);
-    }
+  .main-container tbody tr {
+    padding: 20px;
+  }
 }

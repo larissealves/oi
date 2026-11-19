@@ -1,0 +1,96 @@
+/* LANGUAGES — API CONTENT AS CARDS */
+
+.languages {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* O título já existe no cabeçalho da seção */
+.languages h1,
+.languages h2,
+.languages h3 {
+  display: none;
+}
+
+/* Cada idioma vira um card */
+.languages ul,
+.languages ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.languages li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 105px;
+  padding: 22px 24px 22px 82px;
+  border: 1px solid white;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 3px 4px 0 rgba(128, 100, 201, .13);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.languages li::before {
+  content: "✧";
+  position: absolute;
+  left: 22px;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: var(--light-pink);
+  color: var(--hot-pink);
+  font-size: 1.5rem;
+}
+
+.languages li:nth-child(even) {
+  background: var(--light-lavender);
+}
+
+.languages li:nth-child(even)::before {
+  background: white;
+  color: var(--purple);
+}
+
+.languages li:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 8px 0 rgba(240, 90, 157, .2);
+}
+
+.languages~div .section-note {
+  padding: 20px 0 0 0;
+  max-width: fit-content;
+}
+
+/* README closing messages */
+
+.languages>p {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.7;
+  display: none;
+}
+
+@media (max-width: 580px) {
+
+  .languages ul,
+  .languages ol {
+    grid-template-columns: 1fr;
+  }
+}
